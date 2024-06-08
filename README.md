@@ -7,6 +7,7 @@
 ### Установка
 
 ##### Установите Docker на вашем сервере.
+[Docker Engine](https://docs.docker.com/engine/install/)
 ##### Склонируйте репозиторий:
 
    ```bash
