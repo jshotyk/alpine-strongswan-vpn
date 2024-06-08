@@ -6,8 +6,8 @@
 
 ### Установка
 
-1. Установите Docker на вашем сервере.
-2. Склонируйте репозиторий:
+##### Установите Docker на вашем сервере.
+##### Склонируйте репозиторий:
 
    ```bash
    git clone https://github.com/username/alpine-strongswan-vpn.git
