@@ -4,7 +4,7 @@
 
 ## Использование
 
-### Установка
+### Установка и настройка
 
 ##### Установите Docker на вашем сервере.
 [Docker Engine](https://docs.docker.com/engine/install/)
