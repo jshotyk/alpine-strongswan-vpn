@@ -1,20 +1,16 @@
 version: '3.8'
 
 services:
-  # Конфигурация StrongSwan VPN
   strongswan:
-    # Docker образ для StrongSwan VPN
     image: jshotyk/alpine-strongswan-vpn:latest
-    # Добавляем возможность управления сетью
     cap_add:
       - NET_ADMIN
-    # Используем хостовую сеть для доступа к сетевым интерфейсам
     network_mode: host
-    # Монтируем конфигурационные файлы в контейнер
     volumes:
-      - ./config/strongswan.conf:/etc/strongswan.conf
+      - ./config/ipsec.d/cacerts:/etc/ipsec.d/cacerts
+      - ./config/ipsec.d/certs:/etc/ipsec.d/certs
+      - ./config/ipsec.d/private:/etc/ipsec.d/private
       - ./config/ipsec.conf:/etc/ipsec.conf
       - ./config/ipsec.secrets:/etc/ipsec.secrets
-      - ./config/ipsec.d:/etc/ipsec.d
-    # Имя контейнера
+      #- ./config/serverKey.pem:/etc/ipsec.d/private/serverKey.pem
     container_name: strongswan

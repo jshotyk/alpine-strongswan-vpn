@@ -1,5 +1,5 @@
 # Указываем базовый образ Alpine Linux версии edge
-FROM alpine:edge
+FROM alpine:3.18
 
 # Обновляем репозиторий, добавляя edge/testing
 RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
