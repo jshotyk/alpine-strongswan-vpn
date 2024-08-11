@@ -1,15 +1,12 @@
 version: '3.8'
 
 services:
-  strongswan:
-    image: jshotyk/alpine-strongswan-vpn:latest
+  strongswadn:
+    image: jshotyk/alpine-strongswan-vpn:testing
     cap_add:
       - NET_ADMIN
     network_mode: host
     volumes:
-      - ./config/ipsec.d/cacerts:/etc/ipsec.d/cacerts
-      - ./config/ipsec.d/certs:/etc/ipsec.d/certs
-      - ./config/ipsec.d/private:/etc/ipsec.d/private
       - ./config/ipsec.conf:/etc/ipsec.conf
       - ./config/ipsec.secrets:/etc/ipsec.secrets
       #- ./config/serverKey.pem:/etc/ipsec.d/private/serverKey.pem
